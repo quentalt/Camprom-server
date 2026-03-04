@@ -7,6 +7,7 @@ const app: Application = express();
 
 // Middleware
 app.use(corsMiddleware);
+app.options('*', (req, res) => res.sendStatus(200));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
