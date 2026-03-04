@@ -1,4 +1,3 @@
-// `src/scripts/setup-database.ts`
 import pool from '../config/database';
 
 const createTableQuery = `

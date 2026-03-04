@@ -1,4 +1,3 @@
-// `src/services/camera.service.ts`
 import { Camera, CreateCameraDTO, UpdateCameraDTO, mapDbToCamera, mapCameraToDb } from '../models/camera.model';
 import {query} from "../config/database";
 
