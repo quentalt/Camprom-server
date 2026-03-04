@@ -1,12 +1,12 @@
 import express, { Application } from 'express';
 import { errorHandler } from './middleware/error.middleware';
 import cameraRoutes from './routes/camera.route';
-import cors from "cors";
+import {corsMiddleware} from "./middleware/cors.middleware";
 
 const app: Application = express();
 
 // Middleware
-app.use(cors())
+app.use(corsMiddleware);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
