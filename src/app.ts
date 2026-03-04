@@ -11,10 +11,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Routes
-app.get('/health', (req, res) => {
-  res.json({ status: 'OK', message: 'Camera API is running' });
-});
-
+app.get('/', (req, res) => {
+    res.json({ message: 'Welcome to the Camera API' });
+},);
 app.use('/api/cameras', cameraRoutes);
 
 // Error handling
